@@ -39,6 +39,7 @@
                     </div>
                 </div>
                 <hr />
+                <form action="meus_dados.php" method="POST">
                 <div class="col-md-4">
                     <div class="form-group">
                         <label>Digite seu Nome:</label>
@@ -53,17 +54,17 @@
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label>Digite sue Senha: </label>
+                        <label>Digite sua Senha: </label>
                         <input type="password" class="form-control" placeholder="Digite sua Senha aqui..." name="senha" id="senha" value="<?= $dadosUser[0]['senha_usuario'] ?>" />
                     </div>
                 </div>
                 <div style="text-align: center;">
                     <button type="submit" class="btn btn-success" name="btnAlterar" onclick="return ValidarMeusDados()">Alterar</button>
                 </div>
+                </form>
             </div>
         </div>
     </div>
-    <script src="./assets/js/validarCampos.js"></script>
 </body>
 
 </html>

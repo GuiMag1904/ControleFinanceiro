@@ -118,9 +118,9 @@ function ValidarConta(){
         $("#numero").focus();
         return false;
     }
-    if($("#saldo").val().trim() == ''){
+    if($("#valor").val().trim() == ''){
         alert("Preencha o campo SALDO (R$)!");
-        $("#numero").focus();
+        $("#valor").focus();
         return false;
     }
 }
@@ -138,7 +138,7 @@ function ValidarMovimentos(){
     }
     if($("#valor").val().trim() == ''){
         alert("Preencha o campo VALOR (R$)!");
-        $("#data").focus();
+        $("#valor").focus();
         return false;
     }
     if($("#categoria").val() == ''){

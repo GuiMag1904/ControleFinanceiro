@@ -17,7 +17,7 @@
         $objDAO = new MovimentoDAO();
 
         // Variável Array que vai receber a consulta executada via PDO!
-        $movs = $objDAO->ConsultarMovimento($tipoMov, $dtInicio, $dtFinal);
+        $movs = $objDAO->FiltrarMovimento($tipoMov, $dtInicio, $dtFinal);
     }else if(isset($_POST['btnExcluir'])){
         $idMov = $_POST['idMov'];
         $idConta = $_POST['idConta'];
@@ -76,7 +76,7 @@
                         </div>
                         <div class="col-md-12">
                             <div class="alignBtn">
-                                <button type="submit" class="btn btn-primary" name="btnPesquisar" onclick="return ValidarConsultarMovimento()">Pesquisar</button>
+                                <button type="submit" class="btn btn-primary" name="btnPesquisar" onclick="return ValidarConsultaMovimento()">Pesquisar</button>
                             </div>
                         </div>
                     </form>

@@ -32,7 +32,6 @@
                     <?php include_once '_msg.php'; ?>
                     <div class="panel-heading">
                         <strong>Preencha os dados solicitados:</strong>
-                        <?php include_once '_msg.php'; ?>
                     </div>
                     <div class="panel-body">
                         <br>

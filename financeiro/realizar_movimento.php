@@ -80,14 +80,14 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label>Digite um Valor (R$):</label>
-                            <input class="form-control" placeholder="Digite o Valor aqui..." name="valor" id="money" value="<?= isset($saldo) ? $saldo : '' ?>"/>
+                            <input class="form-control" placeholder="Digite o Valor aqui..." name="valor" id="valor" value="<?= isset($saldo) ? $saldo : '' ?>"/>
                         </div>
                         <div class="form-group">
                             <label>Selecione uma Categoria:</label>
                             <select class="form-control" name="categoria" id="categoria">
                                 <option value="">Selecione</option>
                                 <?php foreach($categorias as $cat){ ?>
-                                    <option value="<?= $cat['id_categoria'] ?>"><?= $cat['nome_categoria'] ?></option>
+                                    <option value="<?= $cat['id_categoria'] ?>" <?= $categoria == $cat['id_categoria'] ? 'selected' : '' ?>><?= $cat['nome_categoria'] ?></option>
                                 <?php } ?>
                             </select>
                         </div>
@@ -99,7 +99,7 @@
                             <select class="form-control" name="empresa" id="empresa">
                                 <option value="">Selecione</option>
                                 <?php foreach($empresas as $emp){ ?>
-                                    <option value="<?= $emp['id_empresa'] ?>"><?= $emp['nome_empresa'] ?></option>
+                                    <option value="<?= $emp['id_empresa'] ?>" <?= $empresa == $emp['id_empresa'] ? 'selected' : '' ?>><?= $emp['nome_empresa'] ?></option>
                                 <?php } ?>
                             </select>
                         </div>
@@ -108,7 +108,7 @@
                             <select class="form-control" name="conta" id="conta">
                                 <option value="">Selecione</option>
                                 <?php foreach($contas as $ct){ ?>
-                                    <option value="<?= $ct['id_conta'] ?>"><?= $ct['banco_conta'] ?> | R$ <?= number_format($ct['saldo_conta'], 2, ',', '.') ?></option>
+                                    <option value="<?= $ct['id_conta'] ?>" <?= $conta == $ct['id_conta'] ? 'selected' : '' ?>><?= $ct['banco_conta'] ?> | R$ <?= number_format($ct['saldo_conta'], 2, ',', '.') ?></option>
                                 <?php } ?>
                             </select>
                         </div>
@@ -120,7 +120,7 @@
                             <textarea class="form-control" rows="4" placeholder="Digite uma Observação aqui..." name="obs"></textarea>
                         </div>
                         <div class="alignBtn">
-                            <button type="submit" class="btn btn-success" name="btnRealizar" onclick="return ValidarRealizarMovimento()">Realizar Movimento</button>
+                            <button type="submit" class="btn btn-success" name="btnRealizar" onclick="return ValidarMovimentos()">Realizar Movimento</button>
                         </div>
                     </div>
                 </form>
